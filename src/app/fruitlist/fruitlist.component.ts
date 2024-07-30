@@ -1,16 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SingleFruitComponent } from './single-fruit/single-fruit.component';
 
 @Component({
   selector: 'app-fruitlist',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SingleFruitComponent],
   templateUrl: './fruitlist.component.html',
   styleUrl: './fruitlist.component.scss'
 })
 export class FruitlistComponent {
 
   howItWorks= " not bad";
+  customColor = 'green';
+
+  fontColorGood = 'yellow';
+  fontColorBad = 'black';
 
   fruitlist = [
     {
