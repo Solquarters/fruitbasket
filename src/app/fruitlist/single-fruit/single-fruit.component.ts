@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-single-fruit',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './single-fruit.component.html',
   styleUrl: './single-fruit.component.scss'
 })
@@ -19,4 +20,22 @@ export class SingleFruitComponent {
     stars: 2.3,
     reviews:[{name: "Waldemar W.", text: "gut für Obstsalat"},{name: "Olaf P.", text: "Kann man mal machen"}],
   };
+
+inputData = "";
+
+@Output()fruitname = new EventEmitter<string>();
+
+//neue Funktion, die unseren Output fruitname benutzt:
+emitName(){
+  this.fruitname.emit(this.fruit.name);
+}
+
+
+@Output()commentOutput = new EventEmitter<string>();
+sendInputData(){
+  // console.log(this.inputData);
+
+  this.inputData = "Mit ngModel kann Input kann auch anders herum manipuliert werden!";
+}
+
 }

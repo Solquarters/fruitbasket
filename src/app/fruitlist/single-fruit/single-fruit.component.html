@@ -1,6 +1,6 @@
 <section class="singleFruitBox">
     <div>
-            <img src="./assets/img/fruits/{{fruit.img}}" alt="" srcset="">
+            <img src="./assets/img/fruits/{{fruit.img}}" alt="" srcset="" (click)="emitName()">
     </div>
     <div>
         <h2>{{fruit.name}}</h2>
@@ -36,7 +36,7 @@
                 }
                     
             </div>
-            <div><input type="text"><button><img src="./assets/img/arrow-35-32.png" alt="" srcset=""></button>
+            <div><input type="text" [(ngModel)]="inputData"><button><img src="./assets/img/arrow-35-32.png" alt="" srcset="" (click)="sendInputData()"></button>
             </div>
         </div>
     </div>

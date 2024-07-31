@@ -68,6 +68,8 @@ export class FruitlistComponent {
     },
   ]
 
-
+  namelog(name: string){
+    console.log(name);
+  }
 
 }
