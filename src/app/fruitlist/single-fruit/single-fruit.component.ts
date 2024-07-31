@@ -34,8 +34,9 @@ emitName(){
 @Output()commentOutput = new EventEmitter<string>();
 sendInputData(){
   // console.log(this.inputData);
-
-  this.inputData = "Mit ngModel kann Input kann auch anders herum manipuliert werden!";
+  // this.inputData = "Mit ngModel kann Input kann auch anders herum manipuliert werden!";
+  this.commentOutput.emit(this.inputData);
+  this.inputData = '';
 }
 
 }

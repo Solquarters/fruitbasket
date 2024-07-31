@@ -72,4 +72,8 @@ export class FruitlistComponent {
     console.log(name);
   }
 
+  addComment(comment: string, index: number){
+  this.fruitlist[index].reviews.push({name:"TestUser", text: comment });
+  }
+
 }
